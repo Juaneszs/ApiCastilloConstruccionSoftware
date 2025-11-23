@@ -7,6 +7,16 @@ public class Pilar {
 	private double posy;
 	private String  status;
 	
+	public Pilar(){}
+	
+	public Pilar(Long Id, String name, double posx, double posy, String status) {
+		this.Id = Id;
+		this.name = name;
+		this.posx = posx;
+		this.posy = posy;
+		this.status = status;
+	}
+	
 	
 	public Long getid() {
 		return Id;
