@@ -3,15 +3,14 @@ package app.infrastructure.entity;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 @Entity
-
-
+@Table(name = "message_entity")
 public class MessageEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Messageid;
+	private Long messageid;
 	
-	private Long Id;
+	private Long id;
 	
 	private String fragmentedcontent;
 	
@@ -21,13 +20,40 @@ public class MessageEntity {
 	
 	public MessageEntity() {}
 
-	public MessageEntity(Long Messageid, Long Id, String fragmentedcontent, String reconstructedcontent, LocalDateTime timestamp) {
-		this.Id = Id;
-		this.fragmentedcontent = fragmentedcontent;
-		this.timestamp = timestamp;
-	}
-	
 	
 	
 
+	
+	public MessageEntity(Long Id, String fragmentedcontent) {
+	    this.Id = Id;
+	    this.fragmentedcontent = fragmentedcontent;
+	    this.timestamp = LocalDateTime.now();
+	}
+	public Long getMessageid() {
+		return messageid;
+		
+	}
+	
+	public Long getId() {
+		return id;
+	}
+	public String getfragmentedcontent() {
+		return fragmentedcontent;
+		
+	}
+	
+	public String getreconstructedcontent() {
+		return reconstructedcontent;
+	}
+	public LocalDateTime gettimestamp() {
+		return timestamp;
+	}
+	
+	//Solo un setter aqui
+	
+	public void setreconstructedcontent(String reconstructedcontent) {
+		this.reconstructedcontent = reconstructedcontent;
+	}
+	
+	
 }

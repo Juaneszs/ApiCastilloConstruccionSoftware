@@ -20,6 +20,11 @@ public class Message {
 		this.timestamp = timestamp;
 		
 	}
+	public Message(Long id, String fragmentedContent) {
+	    this.Id = id;
+	    this.fragmentedcontent = fragmentedContent;
+	    this.timestamp = LocalDateTime.now();	}
+
 
 	
 	public Long getId() {
