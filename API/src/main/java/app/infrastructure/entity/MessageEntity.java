@@ -8,6 +8,7 @@ public class MessageEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "messageid")
 	private Long messageId;
 	
 	

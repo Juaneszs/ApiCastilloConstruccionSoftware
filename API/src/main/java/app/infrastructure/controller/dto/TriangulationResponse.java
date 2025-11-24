@@ -1,4 +1,4 @@
-package app.application.dto;
+package app.infrastructure.controller.dto;
 
 public class TriangulationResponse {
 	

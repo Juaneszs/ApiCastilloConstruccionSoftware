@@ -1,9 +1,10 @@
 package app.application.usecase;
 
 import java.util.List;
-import app.application.dto.TriangulationResponse;
+
 import app.domain.model.Pilar;
 import app.domain.repository.PilarRepository;
+import app.infrastructure.controller.dto.TriangulationResponse;
 public class TriangulationCalculateUseCase {
 	
 	private final PilarRepository repository;

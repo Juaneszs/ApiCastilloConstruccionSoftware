@@ -1,7 +1,8 @@
 package app.infrastructure.controller;
 
-import app.application.dto.TriangulationResponse;
 import app.application.usecase.TriangulationCalculateUseCase;
+import app.infrastructure.controller.dto.TriangulationResponse;
+
 import org.springframework.web.bind.annotation.*;
 
 @RestController
