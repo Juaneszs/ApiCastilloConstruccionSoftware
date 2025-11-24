@@ -21,6 +21,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 ```
 
 ## ▶ Ejecución
+(deben crearse Pilares en la base de datos)
 ```bash
 mvn clean package
 mvn spring-boot:run
