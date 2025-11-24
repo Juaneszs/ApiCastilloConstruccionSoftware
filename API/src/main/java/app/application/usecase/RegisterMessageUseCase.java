@@ -15,11 +15,14 @@ public class RegisterMessageUseCase {
 		this.repository = repository;
 	}
 	
-	public Message execute(Long Id,String fragmentedcontent) {
-		if(Id == null || fragmentedcontent == null || fragmentedcontent.isBlank()) {
+	public Message execute(Long pilarId,String fragmentedContent) {
+		if(pilarId == null) {
+			throw new IllegalArgumentException("Pilar id es obligatorio");} 
+		if(fragmentedContent == null){throw new IllegalArgumentException("fragmented content es necesario");} 
+		if(fragmentedContent.isBlank()) {
 			throw new IllegalArgumentException("Datos no validos");
 		}
-		Message msg = new Message(Id, fragmentedcontent);
+		Message msg = new Message(pilarId, fragmentedContent);
 		
 		return repository.save(msg);
 	}

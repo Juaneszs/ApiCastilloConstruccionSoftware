@@ -3,53 +3,55 @@ package app.domain.model;
 import java.time.LocalDateTime;
 
 public class Message {
+	//id generada por base de datos
+	private Long messageId;
 	
-	private Long Messageid;
-	private Long Id;
-	private String fragmentedcontent;
-	private String reconstructedcontent;
+	// id del pilar
+	private Long pilarId;
+	private String fragmentedContent;
+	private String reconstructedContent;
 	private LocalDateTime timestamp;
 	
 	public Message() {}
 	
-	public Message(Long Messageid, Long Id, String fragmentedcontent, String reconstructedcontent, LocalDateTime timestamp) {
-		this.Messageid = Messageid;
-		this.Id = Id;
-		this.fragmentedcontent = fragmentedcontent;
-		this.reconstructedcontent = reconstructedcontent;
+	public Message(Long messageId, Long pilarId, String fragmentedContent, String reconstructedContent, LocalDateTime timestamp) {
+		this.messageId = messageId;
+		this.pilarId = pilarId;
+		this.fragmentedContent = fragmentedContent;
+		this.reconstructedContent = reconstructedContent;
 		this.timestamp = timestamp;
 		
 	}
-	public Message(Long id, String fragmentedContent) {
-	    this.Id = id;
-	    this.fragmentedcontent = fragmentedContent;
+	public Message(Long pilarId, String fragmentedContent) {
+	    this.pilarId = pilarId;
+	    this.fragmentedContent = fragmentedContent;
 	    this.timestamp = LocalDateTime.now();	}
 
 
 	
-	public Long getId() {
-		return Id;}
+	public Long getPilarId() {
+		return pilarId;}
 	
-	public void setId(Long Id) {
-		this.Id = Id;}
+	public void setPilarId(Long pilarId) {
+		this.pilarId = pilarId;}
 		
-	public Long getMessageid() {
-		return Messageid;}
+	public Long getMessageId() {
+		return messageId;}
 	
-	public void setMessageid(Long Messageid) {
-		this.Messageid = Messageid;	
+	public void setMessageId(Long messageId) {
+		this.messageId = messageId;	
 	}
-	public String getfragmentedcontent() {
-		return fragmentedcontent;
+	public String getFragmentedContent() {
+		return fragmentedContent;
 	}
-	public void setfragmentedcontect(String fragmentedcontent) {
-		this.fragmentedcontent = fragmentedcontent;
+	public void setFragmentedContent(String fragmentedContent) {
+		this.fragmentedContent = fragmentedContent;
 	}
-	public String getreconstructedcontent() {
-		return reconstructedcontent;
+	public String getReconstructedContent() {
+		return reconstructedContent;
 	}
-	public void setreconstructedcontent(String reconstructedcontent) {
-	this.reconstructedcontent = reconstructedcontent;}
+	public void setReconstructedContent(String reconstructedContent) {
+	this.reconstructedContent = reconstructedContent;}
 	
 	public LocalDateTime gettimestamp() {
 		return timestamp;

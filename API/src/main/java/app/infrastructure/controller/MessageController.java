@@ -19,7 +19,7 @@ public class MessageController {
 	@PostMapping
 	public ResponseEntity<Message> registerMessage(@RequestBody RegisterMessageRequest request){
 		
-		Message Saved = registerMessageUseCase.execute(request.Id,request.fragmentedcontent);
+		Message Saved = registerMessageUseCase.execute(request.pilarId,request.fragmentedContent);
 		
 			
 		return ResponseEntity.status(HttpStatus.CREATED)

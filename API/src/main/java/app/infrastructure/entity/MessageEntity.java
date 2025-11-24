@@ -8,13 +8,15 @@ public class MessageEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long messageid;
+	private Long messageId;
 	
-	private Long id;
 	
-	private String fragmentedcontent;
+	//pilarid del request
+	private Long pilarId;
 	
-	private String reconstructedcontent;
+	private String fragmentedContent;
+	
+	private String reconstructedContent;
 	
 	private LocalDateTime timestamp;
 	
@@ -24,36 +26,50 @@ public class MessageEntity {
 	
 
 	
-	public MessageEntity(Long Id, String fragmentedcontent) {
-	    this.Id = Id;
-	    this.fragmentedcontent = fragmentedcontent;
+	public MessageEntity(Long pilarId, String fragmentedContent) {
+	    this.pilarId = pilarId;
+	    this.fragmentedContent = fragmentedContent;
 	    this.timestamp = LocalDateTime.now();
 	}
-	public Long getMessageid() {
-		return messageid;
+	public Long getMessageId() {
+		return messageId;
 		
 	}
 	
-	public Long getId() {
-		return id;
+	public Long getPilarId() {
+		return pilarId;
 	}
-	public String getfragmentedcontent() {
-		return fragmentedcontent;
+	public String getFragmentedContent() {
+		return fragmentedContent;
 		
 	}
 	
-	public String getreconstructedcontent() {
-		return reconstructedcontent;
+	public String getReconstructedContent() {
+		return reconstructedContent;
 	}
 	public LocalDateTime gettimestamp() {
 		return timestamp;
 	}
 	
-	//Solo un setter aqui
+	//setters
 	
-	public void setreconstructedcontent(String reconstructedcontent) {
-		this.reconstructedcontent = reconstructedcontent;
-	}
+
+    public void setMessageId(Long messageId) { 
+    	this.messageId = messageId; }
+    
+    public void setPilarId(Long pilarId)
+    { this.pilarId = pilarId; }
+    
+    public void setFragmentedContent(String fragmentedContent) 
+    { this.fragmentedContent = fragmentedContent; }
+    
+    public void setReconstructedContent(String reconstructedContent)
+    { this.reconstructedContent = reconstructedContent; }
+    
+    public void setTimestamp(LocalDateTime timestamp)
+    { this.timestamp = timestamp; }
+
+
 	
 	
 }

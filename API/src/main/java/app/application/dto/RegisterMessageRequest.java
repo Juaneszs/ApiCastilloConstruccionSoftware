@@ -1,7 +1,7 @@
 package app.application.dto;
 
 public class RegisterMessageRequest {
-	public Long Id;
-	public String fragmentedcontent;
+	public Long pilarId;
+	public String fragmentedContent;
 
 }
